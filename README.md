@@ -9,7 +9,7 @@ A website of Chiayi City tourism Website using Bootstrap4.
 
 `Provide Google Navigation.`
 
-`Provide Chiayi famous tourist attraction and  
+`Provide Chiayi famous tourist attraction and snack.`
 
 
 
