@@ -1,5 +1,5 @@
 # Chiayi-City-Tourism-Website
-A tourisma website of Chiayi using Bootstrap4.
+A tourism website of Chiayi using Bootstrap4.
 
 **Features are as follow:**
 
