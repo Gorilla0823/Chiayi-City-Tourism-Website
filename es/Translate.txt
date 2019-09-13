@@ -1,0 +1,24 @@
+/bootstrap/nav_style.css 最前面body的字體
+/food/food.html food.csv
+/main/main.html
+/site/site.html site.csv
+/Transportation/transporation.html
+及其下的bus/THSR/TRA
+
+
+自強號
+Tze-Chiang Limited Express
+莒光號
+Chu-Kuang Express
+復興號
+Fu-Hsing Semi Express
+區間快
+Fast Local Train
+區間車
+Local Train
+普快車
+Ordinary Train
+
+中間的previous和next 沒差
+
+alert-warning的部分要注意--TRA跟THSR

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <title>Main_Page</title>
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+
+  <link rel="stylesheet" href="../font/css/all.css">
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <link rel="Shortcut Icon" type="image/x-icon" href="../font/pineapple.png">
+
+  
+  <script src="../bootstrap/js/jquery-3.3.1.min.js"></script>
+  <script src="../bootstrap/js/popper.min.js"></script>
+  <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+</head>
+
+<style type="text/css">
+
+  .carousel-item {
+  height: 100vh;
+  min-height: 350px;
+  background: no-repeat center center scroll;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.bg-transparent{
+  background-color: rgba(245, 245, 245, 0.6) !important;
+}
+
+.carousel-inner .carousel-item {
+  transition: -webkit-transform 2s ease;
+  transition: transform 2s ease;
+  transition: transform 2s ease, -webkit-transform 2s ease;
+}
+.carousel-indicators li {
+  background-color: #000000;
+}
+.bg-trans{
+  background-color: rgba(255, 255, 255, 0.4) !important;
+}
+p,h2,a{
+  color:black;
+  font-family:微軟正黑體;
+}
+</style>
+<body>
+
+  <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel" >
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="5"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="6"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="7"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="8"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="9"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="10"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="11"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="12"></li>
+    </ol>
+
+    <div class="carousel-inner " role="listbox">
+      <div id="accordion" role="tablist">
+      <div class="carousel-item active" style="background-image: url('https://travel.chiayi.gov.tw/upload/travels/d9a62ff707d39926bfdd35956736ba2e.jpg')">
+        <div class="carousel-caption bg-trans" role="tab" id="headingOne">
+          <a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne" class="text-dark">
+          <h2 class="display-5 font-weight-bold">Lantan Musical Fountain</h2></a>
+          <div id="collapseOne" class="collapse hidden" role="tabpanel" aria-labelledby="headingOne">
+          <p class="lead font-weight-bold">35 개의 물줄기, 1 개의 컬럼 샤우트 어, 갈매기 물 춤, 비틀림 회전과 물 댄스가 포함되어 있습니다. 최대 물 분사 높이는 50 미터에 달할 수 있으며 우아한 Yueyingtan 심장이 측면에 있으며 Lantan Scenic Area는 밤에는 조용합니다. 분위기는 확실히 시력과 청력의 두 배 잔치입니다.</p>
+        </div>
+        </div>
+      </div>
+
+      <div class="carousel-item" style="background-image: url('https://travel.chiayi.gov.tw/upload/travels/21f08a8df4c9accdf5b986caf1efa70b.jpg')">
+        <div class="carousel-caption bg-trans" role="tab" id="headingTwo">
+          <a data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo" class="text-dark">
+          <h2 class="display-5 font-weight-bold ">Hinoki Village</h2></a>
+          <div id="collapseTwo" class="collapse hidden" role="tabpanel" aria-labelledby="headingTwo">
+          <p class="lead font-weight-bold">대만 최초의 삼림 문화 및 창조 공원 - Chiayi Yisen Living Village, 2014 년 1 월 1 일부터 3 월 23 일까지 Wenchuang Market, 31 번 서점, Love North Gate Humanities Restaurant, Lao Yang 원 하트 (One Heart)와 두 잎 파빌리온 (Two Leaf Pavilion)에서 변형 된 5 개의 마을, 미키 뮤지엄 (Miki Museum), 상원 (Sen.Market)이 모두 현장에 있습니다.</p>
+        </div>
+      </div>
+    </div>
+    
+      <div class="carousel-item" style="background-image: url('https://travel.chiayi.gov.tw/upload/travels/c6364cd98de57a430f594014d60aa9b1.jpg')">
+        <div class="carousel-caption bg-trans" role="tab" id="headingThree">
+          <a data-toggle="collapse" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree" class="text-dark">
+          <h2 class="display-6 font-weight-bold ">Alishan Forest Railway Garage Park</h2></a>
+          <div id="collapseThree" class="collapse hidden" role="tabpanel" aria-labelledby="headingThree">
+          <p class="lead font-weight-bold">대규모 열차 생태 박물관과 마찬가지로 기관차의 방향을 용이하게하는 폐차 된 스팀 열차, 디젤 기관차, 파워 트레인, 승용차 및 원형 턴테이블과 접촉 할 수 있습니다. 철도 팬이 놓칠 수없는 열차의 보물입니다.</p>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="carousel-item" style="background-image: url('https://travel.chiayi.gov.tw/upload/travels/8a421de4c7b49bb4b45acdf1efc11a7a.jpg')">
+        <div class="carousel-caption bg-trans" role="tab" id="headingFour">
+          <a data-toggle="collapse" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour" class="text-dark">
+          <h2 class="display-5 font-weight-bold" >February 28 Memorial Park</h2></a>
+          <div id="collapseFour" class="collapse hidden" role="tabpanel" aria-labelledby="headingFour">
+          <p class="lead font-weight-bold ">Jiayunnan 지역에 최초의 8/8 기념 공원을 기획하고 건설 한 후 2 년이 넘는 계획과 공사를 거쳐 마침내 2 월 28 일 중국 중화 인민 공화국에서 열렸습니다. 슬프고 무한한 슬픔입니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item" style="background-image: url('https://travel.chiayi.gov.tw/upload/travels/054ad8775dca9bf94372ef3523158a60.jpg')">
+        <div class="carousel-caption bg-trans" role="tab" id="headingFive">
+          <a data-toggle="collapse" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive" class="text-dark">
+          <h2 class="display-5 font-weight-bold">Song of the forest</h2></a>
+          <div id="collapseFive" class="collapse hidden" role="tabpanel" aria-labelledby="headingFive">
+          <p class="lead font-weight-bold">자이시의 임업 회랑에있는 새로운 랜드 마크는 숲의 노래 인 Wang Wenzhi가 산림청이 제공 한 목재, 철도, 노랑색의 포도 나무 및 돌 재료를 사용하여 자이의 "나무 수도"의 영광을 재현 한 작품입니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item" style="background-image: url('https://travel.chiayi.gov.tw/upload/travels/e27b94d3bf9d8139c8ccea8a4f75d5fa.jpg')">
+      <div class="carousel-caption bg-trans" role="tab" id="headingSix">
+        <a data-toggle="collapse" href="#collapseSix" aria-expanded="true" aria-controls="collapseSix" class="text-dark">
+          <h2 class="display-5 font-weight-bold" >Prison museum</h2></a>
+          <div id="collapseSix" class="collapse hidden" role="tabpanel" aria-labelledby="headingSix">
+          <p class="lead font-weight-bold">유일하게 현장 보존 된 펜실베니아 스타일의 감옥 건물 - 자이 올드 교도소 자이 감옥은 타이 쇼 11 년 (1922)에 완성되었습니다. 중화 인민 공화국 제 36 년에 타이완의 자이 (Chiayi) 교도소로 이름이 바뀌었고 1983 년 3 월 Lucao Township으로 옮겼습니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item" style="background-image: url('https://travel.chiayi.gov.tw/upload/travels/bb0e59e826410507d9203f2bf6c24d86.jpg')">
+        <div class="carousel-caption bg-trans" role="tab" id="headingSeven">
+          <a data-toggle="collapse" href="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven" class="text-dark">
+          <h2 class="display-5 font-weight-bold">Shooting tower</h2></a>
+          <div id="collapseSeven" class="collapse hidden" role="tabpanel" aria-labelledby="headingSeven">
+          <p class="lead font-weight-bold">사격 탑은 자이시에서 가장 대표적인 새로운 랜드 마크이며, 자이 공원에서는 사람들이 바라 보았을 때 푸른 하늘에 반영된 거대한 바우 히 니아가 보입니다. 바우 히 니아는 자이시의 꽃입니다. 이런 종류의 빛은 타워를 통해 빛난다. 그것은 자이시의 아름다움을 완전히 보여 준다!</p>
+        </div>
+      </div>
+    </div>
+
+     <div class="carousel-item" style="background-image: url('https://travel.chiayi.gov.tw/upload/travels/29efe89b4f6dfa0ede37e1ffed91e96c.jpg')">
+        <div class="carousel-caption bg-trans" role="tab" id="headingEight">
+          <a data-toggle="collapse" href="#collapseEight" aria-expanded="true" aria-controls="collapseEight" class="text-dark">
+          <h2 class="display-5 font-weight-bold">Chiayi Railway Art Village</h2></a>
+          <div id="collapseEight" class="collapse hidden" role="tabpanel" aria-labelledby="headingEight">
+          <p class="lead font-weight-bold">자이 철도 아트 빌리지는 원래 유휴 철도 창고였으며 정부 계획에 따라 올해 9 월부터 '철도 아트 빌리지'의 기획 작업이 시작되어 예술 창작 및 전시장으로 바뀌었다. 철도 예술 마을의 이상적인 목표를 달성하기 위해 현지 특성과 전체 공동체 건설을 결합하여 활동을 주도하고 있습니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item" style="background-image: url('https://travel.chiayi.gov.tw/upload/travels/9ca47619fd03bc7a0fac2b69e9cf39de.jpg')">
+       <div class="carousel-caption bg-trans" role="tab" id="headingNine">
+        <a data-toggle="collapse" href="#collapseNine" aria-expanded="true" aria-controls="collapseNine" class="text-dark">
+          <h2 class="display-5 font-weight-bold" >Xingjia Suspension Bridge</h2></a>
+          <div id="collapseNine" class="collapse hidden" role="tabpanel" aria-labelledby="headingNine">
+          <p class="lead font-weight-bold">자이안 서스펜션 브리지는 타이완 반얀 나무 심기를위한 자전거 도로가 3.1km에 이르며, 현재 자이 (Chiayi)시는 현지 관광을 촉진하기 위해 교량에 야간 네온 조명을 설치하여 야간 현수교가 오래도록 착용 할 수 있도록하고있다. 반짝이는 밤 진주 목걸이는 특히 눈길을 끄는 밤의 매력이 있습니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item" style="background-image: url('https://travel.chiayi.gov.tw/upload/travels/4cc2c4ecedcd8c6bed50b1b7d39121be.jpg')">
+      <div class="carousel-caption bg-trans" role="tab" id="headingTen">
+        <a data-toggle="collapse" href="#collapseTen" aria-expanded="true" aria-controls="collapseTen" class="text-dark">
+          <h2 class="display-5 font-weight-bold" >Cultural Road Night Market</h2></a>
+          <div id="collapseTen" class="collapse hidden" role="tabpanel" aria-labelledby="headingTen">
+          <p class="lead font-weight-bold">자이시에서 가장 활기차고 권위있는 야시장은 Cultural Road Night Market입니다! 중앙 분수에서부터 문화적인 길, 남쪽까지의 하루는 2 차선 차도이며 밤이 지나면 보행자 전용 도로가됩니다. 밤이 지날 때, 판매 인, 옷, 음식, 간단한 식사 및 다른 납품업자는 시장에서 모두입니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item" style="background-image: url('https://travel.chiayi.gov.tw/upload/travels/c009043da1438799b03975353d5bb5e2.jpg')">
+       <div class="carousel-caption bg-trans" role="tab" id="headingEleven">
+        <a data-toggle="collapse" href="#collapseEleven" aria-expanded="true" aria-controls="collapseEleven" class="text-dark">
+          <h2 class="display-5 font-weight-bold">KANO Park</h2></a>
+           <div id="collapseEleven" class="collapse hidden" role="tabpanel" aria-labelledby="headingEleven">
+          <p class="lead font-weight-bold">106 년 8 월에 완공되어, 모두가 자이시 (Chiayi City)의 자랑스러운 야구 역사를 다시 방문하게하십시오. 가족 교육 센터 맞은 편에있는 야외 음악 극장 및 야구 조각 지역과 마찬가지로 청동 박쥐와 글로브 석이 있습니다. 영화 "KANO"의 라인은 땅에 박혀 있습니다.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="carousel-item" style="background-image: url('https://travel.chiayi.gov.tw/upload/travels/3429f05288941c9d668b25a3f797d624.JPG')">
+         <div class="carousel-caption bg-trans" role="tab" id="headingTwelve">
+          <a data-toggle="collapse" href="#collapseTwelve" aria-expanded="true" aria-controls="collapseTwelve" class="text-dark">
+          <h2 class="display-5 font-weight-bold">Sleeping forest</h2></a>
+          <div id="collapseTwelve" class="collapse hidden" role="tabpanel" aria-labelledby="headingTwelve">
+          <p class="lead font-weight-bold">일러스트 레이터 SMART Zhuang Xinyi는 "Sleeping Forest"라는 테마를 사용하여 흰곰과 핑크 코끼리와 같은 Q-shaped 동물 모델을 디자인했습니다. 원래의 푸른 나무, 공습 대피소, 가로등 및 산책을 결합하여 숲 분위기의 신선함과 평온함을 느낍니다.</p>
+        </div>
+      </div>
+    </div>
+
+      <div class="carousel-item" style="background-image: url('https://travel.chiayi.gov.tw/upload/travels/aa2344b3c9bc442f58203c226b4aab60.jpg')">
+        <div class="carousel-caption bg-trans" role="tab" id="headingThirteen">
+          <a data-toggle="collapse" href="#collapseThirteen" aria-expanded="true" aria-controls="collapseThirteen" class="text-dark">
+          <h2 class="display-5 font-weight-bold">Xianghu Park</h2></a>
+          <div id="collapseThirteen" class="collapse hidden" role="tabpanel" aria-labelledby="headingThirteen">
+          <p class="lead font-weight-bold">공원에는 북서 호수 (Beixiang Lake)가 있으며, 2,000 그루 이상의 관목, 7 만 그루 이상의 나무와 다른 식물이 심어 져 있으며, 주변의 보아이 공원 (Bo'ai Park)과 지 지투 식물원 (Zizitou Botanical Garden)과 함께 서쪽 지역에서 가장 큰 공원 녹지이며 자이시 (Chiayi City)의 폐가됩니다. 공원에는 송풍 파빌리온, 사쿠라 숲, 지즈 토우 식물원, 잔디 슬로프 절경 지역이있어 관광객들이 방문 할 수 있습니다.</p>
+        </div>
+      </div>
+    </div>
+
+
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+  </div>
+
+
+
+ <nav class="navbar fixed-top bg-transparent">
+    <div class="container justify-content-around">
+    
+    <a href="#myModal" class="nav-brand p-2 text-dark col-"  data-toggle="modal" data-target="#myModal"><i class="fas fa-language m-2"></i>번역</a>
+
+    <a class="nav-brand p-2 font-weight-bold col-" href="../navigation/navigation.html"><i class="fas fa-route m-2"></i>내비게이션</a>
+
+    <a class="nav-brand p-2 font-weight-bold col-" href="../transportation/transportation.html"><i class="fas fa-suitcase-rolling m-2"></i>여행</a> 
+    </div>
+
+ </nav>
+  
+  <script type="text/javascript">
+var $item = $('.carousel-item');
+var $wHeight = $(window).height();
+
+$item.height($wHeight); 
+$item.addClass('full-screen');
+
+var $numberofSlides = $('.carousel-item').length;
+var $currentSlide = Math.floor((Math.random() * $numberofSlides));
+
+$('.carousel-indicators li').each(function(){
+  var $slideValue = $(this).attr('data-slide-to');
+  if($currentSlide == $slideValue) {
+    $(this).addClass('active');
+    $item.eq($slideValue).addClass('active');
+  } else {
+    $(this).removeClass('active');
+    $item.eq($slideValue).removeClass('active');
+  }
+});
+
+$('.carousel img').each(function() {
+  var $src = $(this).attr('src');
+  var $color = $(this).attr('data-color');
+  $(this).parent().css({
+    'background-image' : 'url(' + $src + ')',
+    'background-color' : $color
+  });
+  $(this).remove();
+});
+
+$(window).on('resize', function (){
+  $wHeight = $(window).height();
+  $item.height($wHeight);
+});
+$(document).ready(function() {
+  jQuery.fn.carousel.Constructor.TRANSITION_DURATION = 2000  // 2 seconds
+});
+
+  </script>
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title justify-content-between"> 번역</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button> </div>
+      <script>
+      $(document).ready(function(){
+        $("#btn1").click(function(){
+
+          $.post("../modal/microsoft_translation.php",
+          {
+            inputStr:document.getElementById("trans").value,
+            translate:$("#sfs1").val(),
+            translated:$("#sfs2").val(),
+          },
+          function(data,status){
+            var temp1=document.getElementById("jqDiv");
+            temp1.value=data;
+          });  
+        });
+        $("#btn2").click(function(){
+          var synth = window.speechSynthesis;
+          var inputTxt = document.querySelector('#jqDiv');
+          var voices = synth.getVoices();
+          var u=new SpeechSynthesisUtterance(inputTxt.value);
+          var temp1=$("#sfs2").val();
+          if(temp1=="ko")u.lang="ko";
+          else if(temp1=="ja") u.lang="ja";
+          else if(temp1=="zh-Hans") u.lang="zh-CN";
+          else if(temp1=="zh-Hant") u.lang="zh-TW";
+          else if(temp1=="es") u.lang="es";
+          else u.lang="en";
+          synth.speak(u);
+        });
+      });
+    </script>
+   
+    
+   <div class="modal-body" align="center">
+    <div class="form-group">
+      <form>
+    <label>사전 번역 언어:</label>
+    <select class="form-control" id="sfs1" name="sfsname1">
+    <option value="null"> 선택해주세요 </option>
+	<option value="zh-Hant"> 중국어 번체</option>
+	<option value="zh-Hans"> 중국어 간체 </option>
+	<option value="en"> 영문 </option>
+	<option value="ja"> 일문 </option>
+	<option value="ko"> 한국어 </option>
+	<option value="es"> 스페인어 </option>
+    </select></div>
+    <div class="form-group">
+    <label>번역 후 언어:</label>
+    <select class="form-control" id="sfs2" name="sfsname2">
+    <option value="null"> 선택해주세요 </option>
+	<option value="zh-Hant"> 중국어 번체</option>
+	<option value="zh-Hans"> 중국어 간체 </option>
+	<option value="en"> 영문 </option>
+	<option value="ja"> 일문 </option>
+	<option value="ko"> 한국어 </option>
+	<option value="es"> 스페인어 </option>
+    </select></div>
+    
+    <div class="form-group">
+    <textarea class="form-control" id="trans" placeholder="번역 할 텍스트를 입력하십시오."></textarea></div>
+    <div class="form-group">
+    <textarea class="form-control" id="jqDiv" placeholder="결과가 여기에 표시됩니다."></textarea></div>
+    <div id="jqDiv1"></div>
+  <button type="button" class="btn btn-outline-info btn-lg" id="startRecognizeOnceAsyncButton" >음성 인식 시작</button>
+  
+  <div id="warning">
+    <h2 class="display-3">Speech Recognition Speech SDK not found (microsoft.cognitiveservices.speech.sdk.bundle.js missing).</h2>
+  </div>
+  
+  <div id="content" style="display:none">
+    <table width="100%">
+      <tr>
+        <td><input id="subscriptionKey" type="text" size="40" value="de3ee64f495d432b8d0d7311070d813e" hidden="true"></td>
+      </tr>
+      <tr>
+        <td><input id="regionKey" type="text" size="40" value="westus" hidden="true"></td>
+      </tr>
+    </table>
+  </div>
+  <!-- </uidiv> -->
+  <!-- <speechsdkref> -->
+  <!-- Speech SDK reference sdk. -->
+  <script src="../modal/microsoft.cognitiveservices.speech.sdk.bundle.js"></script>
+  <!-- </speechsdkref> -->
+
+  <!-- <authorizationfunction> -->
+  <!-- Speech SDK Authorization token -->
+  <script>
+  // Note: Replace the URL with a valid endpoint to retrieve
+  //       authorization tokens for your subscription.
+  var authorizationEndpoint = "../modal/token.php";
+  function RequestAuthorizationToken() {
+    if (authorizationEndpoint) {
+      var a = new XMLHttpRequest();
+      a.open("GET", authorizationEndpoint);
+      a.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      a.send("");
+      a.onload = function() {
+          var token = JSON.parse(atob(this.responseText.split(".")[1]));
+          regionKey.value = token.region;
+          authorizationToken = this.responseText;
+          subscriptionKey.disabled = true;
+          subscriptionKey.value = "using authorization token (hit F5 to refresh)";
+          console.log("Got an authorization token: " + token);
+      }
+    }
+  }
+  </script>
+  <!-- </authorizationfunction> -->
+  <!-- Speech SDK USAGE -->
+  <script>
+    // status fields and start button in UI
+    var phraseDiv;
+    var startRecognizeOnceAsyncButton;
+    // subscription key and region key for speech services.
+    var subscriptionKey, regionKey;
+    var authorizationToken;
+    var SpeechSDK;
+    var recognizer;
+    document.addEventListener("DOMContentLoaded", function () {
+      startRecognizeOnceAsyncButton = document.getElementById("startRecognizeOnceAsyncButton");
+      subscriptionKey = document.getElementById("subscriptionKey");
+      regionKey = document.getElementById("regionKey");
+      phraseDiv = document.getElementById("trans");
+      startRecognizeOnceAsyncButton.addEventListener("click", function () {
+        startRecognizeOnceAsyncButton.disabled = true;
+        phraseDiv.value = "";
+        // if we got an authorization token, use the token. Otherwise use the provided subscription key
+        var speechConfig;
+        if (authorizationToken) {
+          speechConfig = SpeechSDK.SpeechConfig.fromAuthorizationToken(authorizationToken, regionKey.value);
+        } else {
+          if (subscriptionKey.value === "" || subscriptionKey.value === "subscription") {
+            alert("Please enter your Microsoft Cognitive Services Speech subscription key!");
+            return;
+          }
+          speechConfig = SpeechSDK.SpeechConfig.fromSubscription(subscriptionKey.value, regionKey.value);
+        }
+        
+    var temp1=document.getElementById("sfs1").value;
+        if(temp1=="zh-Hans") speechConfig.speechRecognitionLanguage = "zh-CN";
+    else if(temp1=="zh-Hant") speechConfig.speechRecognitionLanguage = "zh-TW";
+    else if(temp1=="ja") speechConfig.speechRecognitionLanguage = "ja-JP";
+    else if(temp1=="ko") speechConfig.speechRecognitionLanguage = "ko-KR";
+    else if(temp1=="es") speechConfig.speechRecognitionLanguage = "es-ES";
+    else speechConfig.speechRecognitionLanguage = "en-US";
+    
+        var audioConfig  = SpeechSDK.AudioConfig.fromDefaultMicrophoneInput();
+        recognizer = new SpeechSDK.SpeechRecognizer(speechConfig, audioConfig);
+        recognizer.recognizeOnceAsync(
+          function (result) {
+            startRecognizeOnceAsyncButton.disabled = false;
+            phraseDiv.value += result.text;
+            window.console.log(result);
+            recognizer.close();
+            recognizer = undefined;
+          },
+          function (err) {
+            startRecognizeOnceAsyncButton.disabled = false;
+            phraseDiv.value += err;
+            window.console.log(err);
+            recognizer.close();
+            recognizer = undefined;
+          });
+      });
+      if (!!window.SpeechSDK) {
+        SpeechSDK = window.SpeechSDK;
+        startRecognizeOnceAsyncButton.disabled = false;
+        document.getElementById('content').style.display = 'block';
+        document.getElementById('warning').style.display = 'none';
+        // in case we have a function for getting an authorization token, call it.
+        if (typeof RequestAuthorizationToken === "function") {
+            RequestAuthorizationToken();
+        }
+      }
+    });
+  </script>
+  </div>
+  
+      <div class="modal-footer">
+      <div class="container col-" align="center">
+      <button type="button" class="btn btn-success mr-auto mt-2" id="btn2" value="speak">음성</button>
+      <button type="button" class="btn btn-success mr-auto mt-2" value="translating" id="btn1">번역</button>
+      <button type="reset" class="btn btn-info mr-auto mt-1" value="clear">지우기</button>
+      <button type="button" class="btn btn-danger mr-auto mt-1" data-dismiss="modal">닫기</button>
+      </div>
+      </div>
+      </form>
+
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
+ </body>
+</html>

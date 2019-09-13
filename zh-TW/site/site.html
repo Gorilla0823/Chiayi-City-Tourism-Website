@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <title> Site </title>
+
+  <link rel="Shortcut Icon" type="image/x-icon" href="../font/pineapple.png">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+
+  <link rel="stylesheet" href="../font/css/all.css">
+  <link rel="stylesheet" href="../bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../bootstrap/nav_style.css">
+  
+  <script src="../bootstrap/js/jquery-3.3.1.min.js"></script>
+  <script src="../bootstrap/js/popper.min.js"></script>
+  <script src="../bootstrap/js/bootstrap.min.js"></script>
+
+</head>
+<style type="text/css">
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+</style>
+
+<body>
+  <nav class="navbar navbar-default fixed-top">
+    <div class="container justify-content-around">
+
+    <a class="nav-brand p-2 text-success col-" href="../main/main.html"><i class="fas fa-home m-2">首頁</i></a>
+
+     <a href="#myModal" class="nav-brand p-2 text-dark col-"  data-toggle="modal" data-target="#myModal"><i class="fas fa-language m-2"></i>翻譯</a>
+
+    <a class="nav-brand p-2 col- text-dark" href="../navigation/navigation.html"><i class="fas fa-route  m-2"></i>導航</a>
+
+    </div>
+  </nav>
+
+  <div class="py-5">
+    <div class="container py-3">
+      <div class="row">
+        <div class="col-sm-12" id="employee_table">
+      </div>
+    </div>
+  </div>
+
+   <nav class="navbar navbar-default fixed-bottom">
+    <div class="container justify-content-around">
+        <a class="nav-brand p-0 text-dark " href="../transportation/transportation.html"><i class="fas fa-bus m-2 "></i>交通</a>
+        <a class="nav-brand p-3 bg-light font-weight-bold" href="../site/site.html"><i class="fas fa-street-view m-2 "></i>景點</a>
+        <a class="nav-brand p-0 text-dark" href="../food/food.html"><i class=" fas fa-coffee m-2"></i>美食</a>
+      </div>
+    </nav>
+
+
+<script>
+  $(document).ready(function(){
+      $.ajax({
+     url:"site.csv",
+     dataType:"text",
+     success:function(data)
+     {
+      var employee_data = data.split(/\r?\n|\r/);
+      var table_data = '<div>';
+      table_data += '<div id="accordion" role="tablist">' ;
+      for(var count = 1; count<employee_data.length; count++)
+      {
+       var cell_data = employee_data[count].split(",");
+
+          table_data += '<a class="list-group-item list-group-item-action d-flex align-items-center mb-2" data-toggle="collapse" href="#'+ count +'" aria-expanded="true" aria-controls="' + count + '">'+'<div class="w-100">'+'<h6 class="mb-2 pl-4 text-left font-weight-bold">'+cell_data[1]+'</h6>';
+
+          table_data += '<h6 class="mb-2 text-left">'+'<i class="fas fa-calendar-alt m-2 ">'+'</i>'+cell_data[2]+'</h6>';
+          table_data += '<h6 class="mb-2 text-left">'+'<i class="fas fa-building m-2 ">'+'</i>'+cell_data[8]+'</h6>'; 
+          table_data += '<h6 class="mb-2 text-left">'+'<i class="fas fa-phone m-2 ">'+'</i>'+cell_data[5]+'</h6>'+'</div>';
+          table_data += '<img class="d-block float-right rounded" src="'+cell_data[17]+'" width=150px height=100px alt="Responsive image" alt="Cinque Terre" >'+'</a>';
+          table_data += '<div id="' + count + '" class="collapse hidden" role="tabpanel" aria-labelledby="headingOne">'+'<div class="card-body">'+cell_data[3]+'<div class="map-responsive">'+'<iframe width="300" height="200" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?q='+cell_data[26]+','+cell_data[25]+'&hl=es;z=14&amp;output=embed" >'+'</iframe>'+'</div>'+'</div>'+ '</div>'+ '</div>';
+      }
+    table_data += '</div>';
+    $('#employee_table').html(table_data);
+   }
+  });
+    });
+</script>
+<div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title justify-content-between"> 翻譯</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button> </div>
+      <script>
+      $(document).ready(function(){
+        $("#btn1").click(function(){
+
+          $.post("../modal/microsoft_translation.php",
+          {
+            inputStr:document.getElementById("trans").value,
+            translate:$("#sfs1").val(),
+            translated:$("#sfs2").val(),
+          },
+          function(data,status){
+            var temp1=document.getElementById("jqDiv");
+            temp1.value=data;
+          });  
+        });
+        $("#btn2").click(function(){
+          var synth = window.speechSynthesis;
+          var inputTxt = document.querySelector('#jqDiv');
+          var voices = synth.getVoices();
+          var u=new SpeechSynthesisUtterance(inputTxt.value);
+          var temp1=$("#sfs2").val();
+          if(temp1=="ko")u.lang="ko";
+          else if(temp1=="ja") u.lang="ja";
+          else if(temp1=="zh-Hans") u.lang="zh-CN";
+          else if(temp1=="zh-Hant") u.lang="zh-TW";
+          else if(temp1=="es") u.lang="es";
+          else u.lang="en";
+          synth.speak(u);
+        });
+      });
+    </script>
+   
+    
+   <div class="modal-body" align="center">
+    <div class="form-group">
+      <form>
+    <label>翻譯前語言:</label>
+    <select class="form-control" id="sfs1" name="sfsname1">
+    <option value="null"> 請選擇 </option>
+    <option value="zh-Hant"> 繁體中文 </option>
+    <option value="zh-Hans"> 簡體中文 </option>
+    <option value="en"> 英文 </option>
+    <option value="ja"> 日文 </option>
+    <option value="ko"> 韓文 </option>
+    <option value="es"> 西班牙文 </option>
+    </select></div>
+    <div class="form-group">
+    <label>翻譯後語言:</label>
+    <select class="form-control" id="sfs2" name="sfsname2">
+    <option value="null"> 請選擇 </option>
+    <option value="zh-Hant"> 繁體中文 </option>
+    <option value="zh-Hans"> 簡體中文 </option>
+    <option value="en"> 英文 </option>
+    <option value="ja"> 日文 </option>
+    <option value="ko"> 韓文 </option>
+    <option value="es"> 西班牙文 </option>
+    </select></div>
+    
+    <div class="form-group">
+    <textarea class="form-control" id="trans" placeholder="請輸入你要翻譯的文字"></textarea></div>
+    <div class="form-group">
+    <textarea class="form-control" id="jqDiv" placeholder="結果會顯示在這裡"></textarea></div>
+    <div id="jqDiv1"></div>
+  <button type="button" class="btn btn-outline-info btn-lg" id="startRecognizeOnceAsyncButton" >開始語音辨識</button>
+  
+  <div id="warning">
+    <h2 class="display-3">Speech Recognition Speech SDK not found (microsoft.cognitiveservices.speech.sdk.bundle.js missing).</h2>
+  </div>
+  
+  <div id="content" style="display:none">
+    <table width="100%">
+      <tr>
+        <td><input id="subscriptionKey" type="text" size="40" value="de3ee64f495d432b8d0d7311070d813e" hidden="true"></td>
+      </tr>
+      <tr>
+        <td><input id="regionKey" type="text" size="40" value="westus" hidden="true"></td>
+      </tr>
+    </table>
+  </div>
+  <!-- </uidiv> -->
+  <!-- <speechsdkref> -->
+  <!-- Speech SDK reference sdk. -->
+  <script src="../modal/microsoft.cognitiveservices.speech.sdk.bundle.js"></script>
+  <!-- </speechsdkref> -->
+
+  <!-- <authorizationfunction> -->
+  <!-- Speech SDK Authorization token -->
+  <script>
+  // Note: Replace the URL with a valid endpoint to retrieve
+  //       authorization tokens for your subscription.
+  var authorizationEndpoint = "../modal/token.php";
+  function RequestAuthorizationToken() {
+    if (authorizationEndpoint) {
+      var a = new XMLHttpRequest();
+      a.open("GET", authorizationEndpoint);
+      a.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+      a.send("");
+      a.onload = function() {
+          var token = JSON.parse(atob(this.responseText.split(".")[1]));
+          regionKey.value = token.region;
+          authorizationToken = this.responseText;
+          subscriptionKey.disabled = true;
+          subscriptionKey.value = "using authorization token (hit F5 to refresh)";
+          console.log("Got an authorization token: " + token);
+      }
+    }
+  }
+  </script>
+  <!-- </authorizationfunction> -->
+  <!-- Speech SDK USAGE -->
+  <script>
+    // status fields and start button in UI
+    var phraseDiv;
+    var startRecognizeOnceAsyncButton;
+    // subscription key and region key for speech services.
+    var subscriptionKey, regionKey;
+    var authorizationToken;
+    var SpeechSDK;
+    var recognizer;
+    document.addEventListener("DOMContentLoaded", function () {
+      startRecognizeOnceAsyncButton = document.getElementById("startRecognizeOnceAsyncButton");
+      subscriptionKey = document.getElementById("subscriptionKey");
+      regionKey = document.getElementById("regionKey");
+      phraseDiv = document.getElementById("trans");
+      startRecognizeOnceAsyncButton.addEventListener("click", function () {
+        startRecognizeOnceAsyncButton.disabled = true;
+        phraseDiv.value = "";
+        // if we got an authorization token, use the token. Otherwise use the provided subscription key
+        var speechConfig;
+        if (authorizationToken) {
+          speechConfig = SpeechSDK.SpeechConfig.fromAuthorizationToken(authorizationToken, regionKey.value);
+        } else {
+          if (subscriptionKey.value === "" || subscriptionKey.value === "subscription") {
+            alert("Please enter your Microsoft Cognitive Services Speech subscription key!");
+            return;
+          }
+          speechConfig = SpeechSDK.SpeechConfig.fromSubscription(subscriptionKey.value, regionKey.value);
+        }
+        
+    var temp1=document.getElementById("sfs1").value;
+        if(temp1=="zh-Hans") speechConfig.speechRecognitionLanguage = "zh-CN";
+    else if(temp1=="zh-Hant") speechConfig.speechRecognitionLanguage = "zh-TW";
+    else if(temp1=="ja") speechConfig.speechRecognitionLanguage = "ja-JP";
+    else if(temp1=="ko") speechConfig.speechRecognitionLanguage = "ko-KR";
+    else if(temp1=="es") speechConfig.speechRecognitionLanguage = "es-ES";
+    else speechConfig.speechRecognitionLanguage = "en-US";
+    
+        var audioConfig  = SpeechSDK.AudioConfig.fromDefaultMicrophoneInput();
+        recognizer = new SpeechSDK.SpeechRecognizer(speechConfig, audioConfig);
+        recognizer.recognizeOnceAsync(
+          function (result) {
+            startRecognizeOnceAsyncButton.disabled = false;
+            phraseDiv.value += result.text;
+            window.console.log(result);
+            recognizer.close();
+            recognizer = undefined;
+          },
+          function (err) {
+            startRecognizeOnceAsyncButton.disabled = false;
+            phraseDiv.value += err;
+            window.console.log(err);
+            recognizer.close();
+            recognizer = undefined;
+          });
+      });
+      if (!!window.SpeechSDK) {
+        SpeechSDK = window.SpeechSDK;
+        startRecognizeOnceAsyncButton.disabled = false;
+        document.getElementById('content').style.display = 'block';
+        document.getElementById('warning').style.display = 'none';
+        // in case we have a function for getting an authorization token, call it.
+        if (typeof RequestAuthorizationToken === "function") {
+            RequestAuthorizationToken();
+        }
+      }
+    });
+  </script>
+  </div>
+  
+      <div class="modal-footer">
+      <div class="container col-" align="center">
+      <button type="button" class="btn btn-success mr-auto mt-2" id="btn2" value="speak">語音</button>
+      <button type="button" class="btn btn-success mr-auto mt-2" value="translating" id="btn1">翻譯</button>
+      <button type="reset" class="btn btn-info mr-auto mt-1" value="clear">清除</button>
+      <button type="button" class="btn btn-danger mr-auto mt-1" data-dismiss="modal">關閉</button>
+      </div>
+      </div>
+      </form>
+
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>
+</body>
+</html>
